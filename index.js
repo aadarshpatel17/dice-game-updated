@@ -1,3 +1,5 @@
+var firstWinner = 0, secondWinner = 0;
+
 function enterName() {
     // inserting name of player
     var name = '';
@@ -13,9 +15,15 @@ function enterName() {
 }
 
 function newName() {
+    firstWinner = 0, secondWinner = 0;
     document.getElementById('first-player').innerHTML = 'Player1';
     document.getElementById('second-player').innerHTML = 'Player2';
     document.getElementById('winner').style.cssText = 'display: none';
+    document.getElementById('first-winner').style.cssText = 'display:none';
+    document.getElementById('second-winner').style.cssText = 'display:none';
+    document.getElementById('first-winner').innerHTML = 'win: 0';
+    document.getElementById('second-winner').innerHTML = 'win: 0';
+    
     // removing all previous child class from id="first-dice"
     var diceOne = document.getElementById('first-dice');
     while(diceOne.hasChildNodes()) {
@@ -174,21 +182,30 @@ function diceGame() {
         document.getElementById('second-dice').appendChild(node6);
     }
 
+
+    //win-count
+    document.getElementById('first-winner').style.cssText = 'display: block';
+    document.getElementById('second-winner').style.cssText = 'display: block';
     if(player > bot) {
         document.getElementById('first-dice').className += ' dice-active';
         document.getElementById('winner-active').classList.remove('winner');
         document.getElementById('winner').innerHTML = 'congo! <br> you won!';
         document.getElementById('winner').style.cssText  = "background-color: transparent;font-size:2rem;color:rgb(0, 182, 0);";
+        document.getElementById('first-winner').innerHTML = `won: ${++firstWinner}`;
     }
     else if(player < bot) {
         document.getElementById('second-dice').className += ' dice-active';
         document.getElementById('winner-active').classList.remove('winner');
         document.getElementById('winner').innerHTML = 'You lose <br> try again!';
         document.getElementById('winner').style.cssText  = "background-color: transparent;font-size:2rem;color:red;";
+        document.getElementById('second-winner').innerHTML = `won: ${++secondWinner}`;
     }
     else {
         document.getElementById('winner-active').classList.remove('winner');
         document.getElementById('winner').innerHTML = ' Try Again!';
         document.getElementById('winner').style.cssText  = " background-color: transparent;font-size:2rem;color:rgb(49, 49, 255);";
     }
+
+
+
 }

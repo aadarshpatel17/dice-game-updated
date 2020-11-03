@@ -51,18 +51,6 @@ body {
     display: flex;
     justify-content: center;
 }
-/* img {
-    width: 150px;
-    height: 150px;
-    background-color: rgb(245, 245, 255);
-}
-@media only screen and (min-width: 700px) {
-    img {
-        width: 200px;
-        height: 200px;
-    }
-} */
-
 
 .winner,
 .play-again {
@@ -91,6 +79,16 @@ body {
 .winner {
     display: none;
 }
+.win-count {
+    color: green;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    display: none;
+}
+
+
+
 
 .content-footer {
     background-color: rgb(49, 49, 255);
