@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Coiny', cursive;
+    text-transform: uppercase;
+    color: white;
+}
+
+.container {
+    height: 100vh;
+}
+.content-header {
+    text-align: center;
+    font-size: 3rem;
+    background-color: rgb(49, 49, 255);
+    padding: 1rem;
+}
+.content-body {
+    height: calc(100vh - 135px);
+    background-color: yellow;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.player {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.content-body-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.first-player,
+.second-player  {
+    color: rgb(53, 53, 53);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.content-body-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* img {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(245, 245, 255);
+}
+@media only screen and (min-width: 700px) {
+    img {
+        width: 200px;
+        height: 200px;
+    }
+} */
+
+
+.winner,
+.play-again {
+    background-color: yellow;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+.play-again {
+    display: none;
+}
+.play {
+    display: none;
+}
+.btn {
+    background-color: rgb(49, 49, 255);
+    padding: 1rem;
+    border: none;
+    color: white;
+    font-family: 'Coiny', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.winner {
+    display: none;
+}
+
+.content-footer {
+    background-color: rgb(49, 49, 255);
+    color: white;
+    text-align: center;
+}
+
+
+/* dice design */
+.dice {
+    background-color: red;
+    width: calc(100vh - 70vh);
+    height: 25vh;
+    border-radius: 20%;
+    position: relative;
+}
+.dice-active {
+    background-color: rgb(0, 182, 0);
+}
+@media only screen and (max-width: 700px) {
+    .dice {
+        width: calc(100vh - 80vh);
+        height: 20vh;
+    }
+}
+.circle {
+    background-color: white;
+    width: 20%;
+    height: 5vh;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 4px 3px 20px 10px rgb(255, 189, 173);
+}
+circle-active {
+    display: none;
+}
+.center {
+    top: 40%;
+    right: 40%;
+}
+.bottom-left {
+    bottom: 10%;
+    left: 10%;
+}
+.bottom-right {
+    bottom: 10%;
+    right: 10%;
+}
+.top-left {
+    top: 10%;
+    left: 10%;
+}
+.top-right {
+    top: 10%;
+    right: 10%;
+}
+.middle-left {
+    top: 40%;
+    left: 10%;
+}
+.middle-right {
+    top: 40%;
+    right: 10%;
+}
